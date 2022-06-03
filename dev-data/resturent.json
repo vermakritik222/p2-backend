@@ -1,0 +1,21 @@
+{
+    "RestaurantName": "PizzaHut",
+
+    "logo": "",
+
+    "CoverImg": "/img/RestaurantCover/pizahut_Asam_Pedas_Spaghetti.jpg",
+
+    "Location": "Delhi",
+
+    "FullAdders": "Near Laxmi Dairy (99), Mukherjee Nagar",
+
+    "Description": "Fresh Blast OfJamun With A Hint Of Refreshing Mint Fresh Blast OfJamun With A Hint Of Refreshing Mint lorem",
+
+    "Rating": 3.4,
+
+    "SpecialDiscount": 0,
+
+    "SpecialDiscountDescription": "",
+
+    "MenuCatagories": ["pasta", "sides", "drinks"]
+}

@@ -1,0 +1,117 @@
+POST http://localhost:8000/api/v1/restaurants HTTP/1.1
+Content-Type: application/json
+
+{
+    "RestaurantName": "McDonald's",
+
+    "logo": "",
+
+    "CoverImg": "/img/RestaurantCover/McDonald.avif",
+
+    "Location": "Noida",
+
+    "FullAdders": "Sector 18, Noida",
+
+    "Description": "Fresh Blast OfJamun With A Hint Of Refreshing Mint Fresh Blast OfJamun With A Hint Of Refreshing Mint lorem",
+
+    "Rating": 3.4,
+
+    "SpecialDiscount": 0,
+
+    "SpecialDiscountDescription": "",
+
+    "MenuCatagories": ["pasta", "sides", "drinks"],
+    "Menu": [
+        {
+            "DishName": "McAloo Tikki Burger",
+            "Img": "/img/food/Mac_McAloo_Tikki_Burger.avif",
+            "price": 46,
+            "Description": "A tikki delight: Potato and peas patty topped with veg sauce, ketchup, tomatoes and onions with toasted buns",
+            "Category": "burger",
+            "vg_ng": 1,
+            "Rating": 4
+        },
+        {
+            "DishName": "Pizza McPuff",
+            "Img": "/img/food/Mac_Pizza_McPuff.avif",
+            "price": 37,
+            "Description": "Blend of assorted vegetables [carrot, beans, capsicum, onion and green peas], mozzarella cheese mixed with tomato sauce and exotic spices stuffed in rectangle shaped savoury dough",
+            "Category": "recommended",
+            "vg_ng": 1,
+            "Rating": 4
+        },
+        {
+            "DishName": "McVeggie",
+            "Img": "/img/food/Mac_McVeggie.avif",
+            "price": 95,
+            "Description": "A patty made of potatoes, peas, carrots, beans, onions, red capsicum and a selection of Indian spices, topped with crispy lettuce, mayonnaise, packed into sesame toasted buns.",
+            "Category": "burger",
+            "vg_ng": 1,
+            "Rating": 3
+        },
+        {
+            "DishName": "Large Fries",
+            "Img": "/img/food/Mac_Large_Fries.avif",
+            "price": 106,
+            "Description": "A patty made of potatoes, peas, carrots, beans, onions, red capsicum and a selection of Indian spices, topped with crispy lettuce, mayonnaise, packed into sesame toasted buns.",
+            "Category": "recommended",
+            "vg_ng": 1,
+            "Rating": 3
+        },
+        {
+            "DishName": "Veg Maharaja Mac",
+            "Img": "/img/food/Mac_Veg_Maharaja_Mac.avif",
+            "price": 197,
+            "Description": "Big Mac sesame seeds bun, with rich and crusty cheesy corn patty, topped with chunky vegetable-cocktail sauce served with pungent jalapeño slices, red onion slices, tomato slices, Cheddar cheese slice and crisp iceberg lettuce.",
+            "Category": "burger",
+            "vg_ng": 1,
+            "Rating": 5
+        },
+        {
+            "DishName": "Big Spicy Paneer Wrap",
+            "Img": "/img/food/Mac_Big_Spicy_Paneer_Wrap.avif",
+            "price": 199,
+            "Description": "Tender paneer patty with a fiery, crunchy batter coating, dressed with fresh veggies and seasonings, topped with creamy sauce and a dash of mustard and melted cheese.",
+            "Category": "burger",
+            "vg_ng": 1,
+            "Rating": 5
+        },
+        {
+            "DishName": "Spicy Paneer/Spicy Chicken Burger(Any 2)+1 Med Fries+2 Puff",
+            "Img": "/img/food/Mac_SpicyPaneerSpicyChickenBurger(Any2)+1MedFries+2Puff.avif",
+            "price": 344,
+            "Description": "Tender paneer patty with a fiery, crunchy batter coating, dressed with fresh veggies and seasonings, topped with creamy sauce and a dash of mustard and melted cheese.",
+            "Category": "Extra Value Meal Large",
+            "vg_ng": 1,
+            "Rating": 4
+        },
+        {
+            "DishName": "McSpicy® Paneer",
+            "Img": "/img/food/Mac_McSpicy_Paneer.avif",
+            "price": 34,
+            "Description": "Crispy and spicy paneer patty with creamy tandoori sauce and crispy lettuce topping",
+            "Category": "burger",
+            "vg_ng": 1,
+            "Rating": 3
+        }
+    ]
+}
+
+
+###
+GET http://localhost:8000/api/v1/restaurants HTTP/1.1
+Content-Type: application/json
+
+
+
+###
+GET http://localhost:8000/api/v1/restaurants/628ef55dda13c73bb61dc6ec HTTP/1.1
+Content-Type: application/json
+
+###
+POST  http://localhost:8000/api/v1/restaurants/itemsdata HTTP/1.1
+Content-Type: application/json
+
+{
+    "oderIds" : ["628f1aa24ed859d8fb0af721","628f1aa24ed859d8fb0af725"]
+}

@@ -1,0 +1,121 @@
+{
+    "RestaurantName": "PizzaHut",
+    "logo": "",
+    "CoverImg": "/img/RestaurantCover/pizahut_Asam_Pedas_Spaghetti.jpg",
+    "Location": "Delhi",
+    "FullAdders": "Near Laxmi Dairy (99), Mukherjee Nagar",
+    "Description": "",
+    "Rating": 3.4,
+    "SpecialDiscount": 0,
+    "SpecialDiscountDescription": "",
+    "DaysOffer": "",
+    "MenuCatagories": ["pasta", "sides", "drinks"],
+    "menu": {
+        "pasta": [
+            {
+                "DishName": "Chicken Meatballs Bolognaise Spaghetti pasta",
+                "Img": "/img/food/pizahut_Chicken_Meatballs_Bolognaise_Spaghetti.jpg",
+                "price": 50,
+                "Description": "Spaghetti with Tomato Bolognaise sauce, topped with Chicken Meatballs.",
+                "Category": "pasta",
+                "vg_ng": 1,
+                "Rating": 2.7,
+                "type": "pasta"
+            },
+            {
+                "DishName": "Asam Pedas Spaghetti pasta",
+                "Img": "/img/food/pizahut_Asam_Pedas_Spaghetti.jpg",
+                "price": 50,
+                "Description": "Spaghetti with Asam Pedas sauce, chicken pepperoni, capsicums, mushroom, herbs and a dash of chili flakes.",
+                "Category": "pasta",
+                "vg_ng": 0,
+                "Rating": 2.7
+            }
+        ],
+        "sides": [
+            {
+                "DishName": "Huts Dalgona Lava Cake",
+                "Img": "/img/food/pizahut_Huts_Dalgona_Lava_Cake.png",
+                "price": 50,
+                "Description": "A warm and deliciously rich flavored coffee lava cake.",
+                "Category": "sides",
+                "vg_ng": 0,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Krispy Wings Original",
+                "Img": "/img/food/pizahut_Krispy_Wings_Original.png",
+                "price": 50,
+                "Description": "Juicy original golden crispy wings served to perfection with light crunchiness bite.",
+                "Category": "sides",
+                "vg_ng": 1,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Mama Mia Meatballs",
+                "Img": "/img/food/pizahut_Mama_Mia_Meatballs.jpg",
+                "price": 50,
+                "Description": "Chicken meatballs cooked with mozzarella cheese, cream, napolitana sauce.",
+                "Category": "sides",
+                "vg_ng": 1,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Onion Rings",
+                "Img": "/img/food/pizahut_Onion_Rings.jpg",
+                "price": 50,
+                "Description": "Light and fluffy battered rings",
+                "Category": "sides",
+                "vg_ng": 0,
+                "Rating": 2.7
+            }
+        ],
+        "Drinks": [
+            {
+                "DishName": "Pepsi",
+                "Img": "/img/food/pizahut_pepsi.jpg",
+                "price": 50,
+                "Description": "Contains Caffeine",
+                "Category": "drinks",
+                "vg_ng": 0,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Mirinda",
+                "Img": "/img/food/pizahut_Mirinda.jpg",
+                "price": 50,
+                "Description": "Contains Caffeine",
+                "Category": "drinks",
+                "vg_ng": 0,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Masala Lemonade",
+                "Img": "/img/food/pizahut_Masala_Lemonade.jpg",
+                "price": 50,
+                "Description": "Masala Lemonade",
+                "Category": "drinks",
+                "vg_ng": 0,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Jamuntiini",
+                "Img": "/img/food/pizahut_Jamuntiini.jpg",
+                "price": 50,
+                "Description": "Fresh Blast OfJamun With A Hint Of Refreshing Mint",
+                "Category": "drinks",
+                "vg_ng": 0,
+                "Rating": 2.7
+            },
+            {
+                "DishName": "Pepsi Family Combo",
+                "Img": "/img/food/pizahut_Pepsi_Family_Combo.jpg",
+                "price": 50,
+                "Description": "Combo of 4 Pepsi Glasses",
+                "Category": "drinks",
+                "vg_ng": 0,
+                "Rating": 2.7
+            }
+        ]
+    }
+}
