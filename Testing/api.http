@@ -2,11 +2,11 @@ POST http://localhost:8000/api/v1/restaurants HTTP/1.1
 Content-Type: application/json
 
 {
-    "RestaurantName": "McDonald's",
+    "RestaurantName": "BegerKing's",
 
     "logo": "",
 
-    "CoverImg": "/img/RestaurantCover/McDonald.avif",
+    "CoverImg": "/img/RestaurantCover/bergerking.avif",
 
     "Location": "Noida",
 

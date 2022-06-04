@@ -9,7 +9,7 @@ router
     .post(productController.postRestaurant);
 
 router.route('/itemsdata').post(productController.getItems);
-router.route('/:metadataId').get(productController.getMenu);
+router.route('/:resId').get(productController.getMenu);
 
 module.exports = router;
 

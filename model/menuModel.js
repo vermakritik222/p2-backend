@@ -28,6 +28,9 @@ const menuSchema = new mongoose.Schema({
     Description: {
         type: String,
     },
+    redId: {
+        type: mongoose.Schema.Types.ObjectId,
+    },
 });
 
 const Menu = mongoose.model('menu', menuSchema);

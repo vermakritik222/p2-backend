@@ -2,7 +2,7 @@
     "name": "P2",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "dev": "nodemon server.js"
@@ -17,7 +17,8 @@
         "express": "^4.17.3",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^6.3.0",
-        "uuid": "^8.3.2"
+        "uuid": "^8.3.2",
+        "validator": "^13.7.0"
     },
     "devDependencies": {
         "eslint": "^7.30.0",

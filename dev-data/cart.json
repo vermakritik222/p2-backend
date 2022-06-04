@@ -1,0 +1,61 @@
+{
+    "oder": [
+        "629ad294bb283f7cd8d80100",
+        "629ad295bb283f7cd8d80104",
+        "629ad28abb283f7cd8d800f5",
+        "629ad288bb283f7cd8d800e9"
+    ],
+    "oderDetails": [
+        {
+            "Category": "burger",
+            "Description": "A patty made of potatoes, peas, carrots, beans, onions, red capsicum and a selection of Indian spices, topped with crispy lettuce, mayonnaise, packed into sesame toasted buns.",
+            "DishName": "McVeggie",
+            "Img": "/img/food/Mac_McVeggie.avif",
+            "Rating": 3,
+            "price": 95,
+            "redId": "629ad293bb283f7cd8d800fa",
+            "vg_ng": true,
+            "__v": 0,
+            "_id": "629ad294bb283f7cd8d80100"
+        },
+        {
+            "Category": "burger",
+            "Description": "Big Mac sesame seeds bun, with rich and crusty cheesy corn patty, topped with chunky vegetable-cocktail sauce served with pungent jalapeño slices, red onion slices, tomato slices, Cheddar cheese slice and crisp iceberg lettuce.",
+            "DishName": "Veg Maharaja Mac",
+            "Img": "/img/food/Mac_Veg_Maharaja_Mac.avif",
+            "Rating": 5,
+            "price": 197,
+            "redId": "629ad293bb283f7cd8d800fa",
+            "vg_ng": true,
+            "__v": 0,
+            "_id": "629ad295bb283f7cd8d80104"
+        },
+        {
+            "Category": "Extra Value Meal Large",
+            "Description": "Tender paneer patty with a fiery, crunchy batter coating, dressed with fresh veggies and seasonings, topped with creamy sauce and a dash of mustard and melted cheese.",
+            "DishName": "Spicy Paneer/Spicy Chicken Burger(Any 2)+1 Med Fries+2 Puff",
+            "Img": "/img/food/Mac_SpicyPaneerSpicyChickenBurger(Any2)+1MedFries+2Puff.avif",
+            "Rating": 4,
+            "price": 344,
+            "redId": "629ad288bb283f7cd8d800e7",
+            "vg_ng": true,
+            "__v": 0,
+            "_id": "629ad28abb283f7cd8d800f5"
+        },
+        {
+            "Category": "burger",
+            "Description": "A tikki delight: Potato and peas patty topped with veg sauce, ketchup, tomatoes and onions with toasted buns",
+            "DishName": "McAloo Tikki Burger",
+            "Img": "/img/food/Mac_McAloo_Tikki_Burger.avif",
+            "Rating": 4,
+            "price": 46,
+            "redId": "629ad288bb283f7cd8d800e7",
+            "vg_ng": true,
+            "__v": 0,
+            "_id": "629ad288bb283f7cd8d800e9"
+        }
+    ],
+    "length": 2,
+    "resId": "",
+    "resName": ""
+}

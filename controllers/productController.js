@@ -1,7 +1,5 @@
 const Restaurant = require('../model/restaurantModel');
 const Menu = require('../model/menuModel');
-const RestaurantMetadata = require('../model/restaurantMetadata');
-const res = require('express/lib/response');
 // const Oder = require('../model/oderModel');
 
 exports.getRestaurant = async (req, res, next) => {
@@ -24,27 +22,21 @@ exports.postRestaurant = async (req, res, next) => {
     const menuArr = [];
 
     try {
+        const newRestaurant = await Restaurant.create(data);
+
         for (let key in menu) {
+            menu[key].redId = newRestaurant._id;
             const mewMenu = await Menu.create(menu[key]);
             menuArr.push(mewMenu._id);
         }
+        newRestaurant.Menu = menuArr;
 
-        const newRestaurantMetadata = await RestaurantMetadata.create({
-            Menu: menuArr,
-        });
-
-        data.RestaurantMetadataID = newRestaurantMetadata._id;
-
-        const newRestaurant = await Restaurant.create(data);
-        newRestaurantMetadata.RestaurantID = newRestaurant._id;
-
-        await newRestaurantMetadata.save();
+        await newRestaurant.save();
 
         res.status(200).json({
             status: 'success',
             data: {
                 Restaurant: newRestaurant,
-                RestaurantMetadata: newRestaurantMetadata,
             },
         });
     } catch (error) {
@@ -57,11 +49,13 @@ exports.postRestaurant = async (req, res, next) => {
 };
 
 exports.getMenu = async (req, res, next) => {
-    const { metadataId } = req.params;
+    const { resId } = req.params;
+
     try {
-        const metadata = await RestaurantMetadata.findById(metadataId);
+        const resdata = await Restaurant.findById(resId);
+
         const doc = await Menu.find({
-            _id: { $in: metadata.Menu },
+            _id: { $in: resdata.Menu },
         });
 
         res.status(200).json({

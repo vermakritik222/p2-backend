@@ -27,7 +27,10 @@ const restaurantSchema = new mongoose.Schema({
         required: true,
         type: Array,
     },
-    RestaurantMetadataID: mongoose.Schema.Types.ObjectId,
+    Menu: {
+        type: Array,
+        required: true,
+    },
 });
 
 const Restaurant = mongoose.model('restaurant', restaurantSchema);

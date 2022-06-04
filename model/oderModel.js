@@ -1,16 +1,17 @@
 const mongoose = require('mongoose');
 
 const oderSchema = new mongoose.Schema({
-    RestaurantID: {
+    userId: {
         type: String,
         required: true,
     },
-    MenuID: {
+    redId: {
         type: String,
         required: true,
     },
-    Oders: {
+    oderId: {
         type: Array,
+        required: true,
     },
 });
 
