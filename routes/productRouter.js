@@ -1,11 +1,12 @@
 const express = require('express');
 const productController = require('../controllers/productController');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router({ mergeParams: true });
 
 router
     .route('/')
-    .get(productController.getRestaurant)
+    .get(authMiddleware.checkUser, productController.getRestaurant)
     .post(productController.postRestaurant);
 
 router.route('/itemsdata').post(productController.getItems);
