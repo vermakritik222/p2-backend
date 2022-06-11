@@ -22,7 +22,7 @@ exports.creatSendToken = (user, statusCode, res) => {
         photo: user.photo,
     };
 
-    res.status(statusCode).cookie('jwt', token, cookieOptions).json({
+    res.status(statusCode).cookie('p2jwt', token, cookieOptions).json({
         status: 'success',
         // token,
         user: userData,

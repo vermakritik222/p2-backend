@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const cookieParser = require('cookie-parser');
 const universalMiddleware = require('./middlewares/universalMiddleware');
 const productRouter = require('./routes/productRouter');
 const authRouter = require('./routes/authRouter');
@@ -9,6 +10,9 @@ const app = express();
 
 // JSON Parser
 app.use(express.json());
+
+// Cookie Parser
+app.use(cookieParser());
 
 // cors
 const corsOption = {

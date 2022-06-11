@@ -8,13 +8,8 @@ const p2userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please tell us your name!!!! '],
     },
-    img: {
+    photo: {
         type: String,
-        required: true,
-    },
-    role: {
-        type: String,
-        required: true,
     },
     email: {
         type: String,
@@ -22,9 +17,6 @@ const p2userSchema = new mongoose.Schema({
         lowercase: true,
         require: [true, 'enter an email'],
         validate: [validator.isEmail, 'Please provide a valid email'],
-    },
-    photo: {
-        type: String,
     },
     role: {
         type: String,
@@ -86,6 +78,17 @@ p2userSchema.methods.correctPassword = async function (
     userPassword
 ) {
     return await bcrypt.compare(candidatePassword, userPassword);
+};
+
+p2userSchema.methods.changedPasswordAfter = function (JWTTimestamp) {
+    if (this.passwordChangedAt) {
+        const changedTimestamps = parseInt(
+            this.passwordChangedAt.getTime() / 1000,
+            10
+        );
+        return JWTTimestamp < changedTimestamps;
+    }
+    return false;
 };
 
 const p2user = mongoose.model('p2user', p2userSchema);

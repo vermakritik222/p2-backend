@@ -10,7 +10,7 @@ exports.postOder = async (req, res) => {
         BalanceAmount,
         Discount,
     } = req.body;
-    const userId = '629ad293bb283f7cd8d800fa';
+    const userId = `${req.user._id}`;
     const gropedData = dataHandlingService.groupBy(oderDetails, 'redId');
     const postData = Object.getOwnPropertyNames(gropedData).map((el) => {
         const oderId = gropedData[el].map((el) => el._id);
