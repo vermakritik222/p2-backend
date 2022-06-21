@@ -10,6 +10,9 @@ router
     .post(productController.postRestaurant);
 
 router.route('/itemsdata').post(productController.getItems);
+router
+    .route('/oders')
+    .get(authMiddleware.checkUser, productController.getOders);
 router.route('/:resId').get(productController.getMenu);
 
 module.exports = router;

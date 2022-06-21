@@ -20,10 +20,14 @@ const p2userSchema = new mongoose.Schema({
     },
     role: {
         type: String,
+        require: [true, 'enter an role'],
         enum: {
             values: ['user', 'vender'],
         },
         default: 'user',
+    },
+    resId: {
+        type: mongoose.Schema.Types.ObjectId,
     },
     password: {
         type: String,

@@ -9,7 +9,10 @@ exports.postOder = async (req, res) => {
         TotalAmount,
         BalanceAmount,
         Discount,
+        paymentStatus,
+        oderName,
     } = req.body;
+    console.log(req.body);
     const userId = `${req.user._id}`;
     const gropedData = dataHandlingService.groupBy(oderDetails, 'redId');
     const postData = Object.getOwnPropertyNames(gropedData).map((el) => {
@@ -18,9 +21,11 @@ exports.postOder = async (req, res) => {
             userId,
             redId: el,
             oderId,
+            paymentStatus,
+            oderName,
         };
     });
-
+    console.log(postData);
     try {
         for (let idx = 0; idx < postData.length; idx++) {
             const doc = await Oder.create(postData[idx]);

@@ -1,3 +1,4 @@
+# User Singin
 POST http://localhost:8000/api/v1/auth/signup HTTP/1.1
 Content-Type: application/json
 
@@ -5,10 +6,25 @@ Content-Type: application/json
 "name":"test",   
 "email":"test@test.com",
 "password":"password@123",
-"passwordConformation":"password@123",
+"passwordConformation":"password@123"
 }
 
 ###
+# Vender singin
+POST http://localhost:8000/api/v1/auth/signup HTTP/1.1
+Content-Type: application/json
+
+{
+"name":"test vender",   
+"email":"vender@test.com",
+"password":"password@123",
+"passwordConformation":"password@123",
+"role":"vender",
+"resId":"62b0a781830000ec3c907aec"
+}
+
+###
+# Login 
 POST http://localhost:8000/api/v1/auth/login HTTP/1.1
 Content-Type: application/json
 

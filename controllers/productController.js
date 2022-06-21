@@ -1,6 +1,6 @@
 const Restaurant = require('../model/restaurantModel');
 const Menu = require('../model/menuModel');
-// const Oder = require('../model/oderModel');
+const Oder = require('../model/oderModel');
 
 exports.getRestaurant = async (req, res, next) => {
     try {
@@ -93,4 +93,13 @@ exports.getItems = async (req, res) => {
             message: 'failed to send document please try again aster sometime',
         });
     }
+};
+
+exports.getOders = async (req, res, next) => {
+    const { resId } = req.user;
+    const data = await Oder.find({ redId: resId });
+    res.status(200).json({
+        status: 'success',
+        Oder: data,
+    });
 };

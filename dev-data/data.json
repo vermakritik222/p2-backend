@@ -1,23 +1,18 @@
 {
     "RestaurantName": "McDonald's",
-
     "logo": "",
-
     "CoverImg": "/img/RestaurantCover/McDonald.avif",
-
     "Location": "Noida",
-
     "FullAdders": "Sector 18, Noida",
-
     "Description": "Fresh Blast OfJamun With A Hint Of Refreshing Mint Fresh Blast OfJamun With A Hint Of Refreshing Mint lorem",
-
     "Rating": 3.4,
-
     "SpecialDiscount": 0,
-
     "SpecialDiscountDescription": "",
-
-    "MenuCatagories": ["pasta", "sides", "drinks"],
+    "MenuCatagories": [
+        "pasta",
+        "sides",
+        "drinks"
+    ],
     "Menu": [
         {
             "DishName": "McAloo Tikki Burger",
