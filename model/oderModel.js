@@ -13,6 +13,17 @@ const oderSchema = new mongoose.Schema({
         type: Array,
         required: true,
     },
+    paymentStatus: {
+        type: String,
+    },
+    oderName: {
+        type: String,
+    },
+});
+
+oderSchema.pre('save', async function (next) {
+    this.placedAt = new Date();
+    next();
 });
 
 const Oder = mongoose.model('Oder', oderSchema);

@@ -17,9 +17,11 @@ exports.creatSendToken = (user, statusCode, res) => {
     };
 
     const userData = {
-        username: user.username,
+        username: user.name,
         email: user.email,
         photo: user.photo,
+        resId: user.resId,
+        role: user.role,
     };
 
     res.status(statusCode).cookie('p2jwt', token, cookieOptions).json({
