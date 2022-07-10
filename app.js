@@ -5,6 +5,7 @@ const universalMiddleware = require('./middlewares/universalMiddleware');
 const productRouter = require('./routes/productRouter');
 const authRouter = require('./routes/authRouter');
 const oderRouter = require('./routes/oderRouter');
+const venderRouter = require('./routes/vendorRouter');
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(`${__dirname}/public`));
 app.use(universalMiddleware.sendTimeStamp);
 
 // Routes
+app.use('/api/v1/vender', venderRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/oder', oderRouter);
 app.use('/api/v1/restaurants', productRouter);

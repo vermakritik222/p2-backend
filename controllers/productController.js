@@ -97,9 +97,40 @@ exports.getItems = async (req, res) => {
 
 exports.getOders = async (req, res, next) => {
     const { resId } = req.user;
-    const data = await Oder.find({ redId: resId });
+    const { status } = req.query;
+    console.log(status);
+    const data = await Oder.find({ redId: resId, status: status });
     res.status(200).json({
         status: 'success',
         Oder: data,
+    });
+};
+
+exports.getItem = async (req, res, next) => {
+    const { ids } = req.body;
+    console.log(ids);
+    const data = await Menu.find({ _id: { $in: ids } });
+
+    res.status(200).json({
+        status: 'success',
+        data,
+        ids,
+    });
+};
+
+exports.updateStatus = async (req, res, next) => {
+    const { id } = req.query;
+    // const { data } = req.body;
+
+    const doc = await Oder.findByIdAndUpdate(id, req.body, {
+        new: true,
+        runValidators: true,
+    });
+
+    res.status(200).json({
+        status: 'success',
+        data: {
+            data: doc,
+        },
     });
 };

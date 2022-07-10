@@ -28,6 +28,10 @@ const menuSchema = new mongoose.Schema({
     Description: {
         type: String,
     },
+    inStock: {
+        type: Boolean,
+        default: true,
+    },
     redId: {
         type: mongoose.Schema.Types.ObjectId,
     },

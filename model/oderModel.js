@@ -19,6 +19,13 @@ const oderSchema = new mongoose.Schema({
     oderName: {
         type: String,
     },
+    status: {
+        type: String,
+        enum: {
+            values: ['preparing', 'completed', 'delivered'],
+        },
+        default: 'preparing',
+    },
 });
 
 oderSchema.pre('save', async function (next) {

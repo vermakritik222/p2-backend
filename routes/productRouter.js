@@ -10,10 +10,18 @@ router
     .post(productController.postRestaurant);
 
 router.route('/itemsdata').post(productController.getItems);
+
 router
     .route('/oders')
     .get(authMiddleware.checkUser, productController.getOders);
+
+router
+    .route('/updatestatus')
+    .patch(authMiddleware.checkUser, productController.updateStatus);
+
 router.route('/:resId').get(productController.getMenu);
+
+router.route('/item').post(productController.getItem);
 
 module.exports = router;
 
